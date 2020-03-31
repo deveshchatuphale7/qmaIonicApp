@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+     Raise alert for someone
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,39 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-title size="large">Raise alert for someone</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Raise alert</ion-card-subtitle>
+      <ion-card-title>Fill in the details</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-input placeholder="Enter First name" [(ngModel)]="dataObj.firstName"></ion-input>
+      <ion-input placeholder="Enter Last name" [(ngModel)]="dataObj.lastName"></ion-input>
+      <ion-input placeholder="Enter Contact no" [(ngModel)]="dataObj.contactNo"></ion-input>
+      <ion-radio-group [(ngModel)]="dataObj.gender">
+        Select gender
+        <ion-item>
+          <ion-label>male</ion-label>
+          <ion-radio value="male"></ion-radio>
+        </ion-item>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+        <ion-item>
+          <ion-label>female</ion-label>
+          <ion-radio value="femmale"></ion-radio>
+        </ion-item>
+    
+      </ion-radio-group>
+      <ion-input placeholder="Enter Age" [(ngModel)]="dataObj.age"></ion-input>
+      <ion-input placeholder="Enter Pincode" [(ngModel)]="dataObj.areapincode"></ion-input>
+      <ion-button expand="full" (click)="enterDetails()">Alert</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
 </ion-content>
